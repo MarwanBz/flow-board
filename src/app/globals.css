@@ -7,6 +7,12 @@ body {
 }
 
 @layer base {
+   * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
   :root {
     --background: 0 0% 100%;
     --foreground: 224 71.4% 4.1%;
@@ -62,11 +68,48 @@ body {
   }
 }
 
-@layer base {
-  * {
-    @apply border-border;
-  }
-  body {
-    @apply bg-background text-foreground;
-  }
+
+
+.taskio-landing {
+  --foreground-rgb: 255, 255, 255;
+  --background-rgb: 0, 0, 0;
+  color: rgb(var(--foreground-rgb));
+  background: rgb(var(--background-rgb));
 }
+
+/* RTL Support */
+.taskio-landing[dir="rtl"] .language-switcher {
+  left: 1rem;
+  right: auto;
+}
+
+/* Gradient Text */
+.taskio-landing .gradient-text {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(45deg, #3b82f6, #06b6d4);
+}
+
+/* Improved Typography */
+.taskio-landing h1,
+.taskio-landing h2,
+.taskio-landing h3 {
+  letter-spacing: -0.025em;
+}
+
+/* Button Hover Effect */
+.taskio-landing .button-hover-effect {
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.taskio-landing .button-hover-effect:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.5);
+}
+
+/* Header Styles */
+.taskio-landing .header-shadow {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
