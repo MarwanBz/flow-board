@@ -1,5 +1,13 @@
 import "./globals.css";
 
+import {
+  ClerkProvider,
+  SignInButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from "@clerk/nextjs";
+
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import { siteConfig } from "../../config/site";
@@ -26,8 +34,18 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html>
-      <body className={inter.className}>{children}</body>
-    </html>
+    <ClerkProvider>
+      <html >
+        <body>
+          <SignedOut>
+            {/* <SignInButton /> */}
+          </SignedOut>
+          <SignedIn>
+            <UserButton />
+          </SignedIn>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
   );
 }

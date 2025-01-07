@@ -1,10 +1,10 @@
 'use client'
 
-import { motion } from 'framer-motion'
-import Image from 'next/image'
-import Link from 'next/link'
 import { Button } from '@/components/ui/button'
+import Image from 'next/image'
 import { LanguageSwitcher } from './language-switcher'
+import Link from 'next/link'
+import { motion } from 'framer-motion'
 
 const headerVariants = {
   hidden: { y: -50, opacity: 0 },
@@ -22,7 +22,7 @@ const headerVariants = {
 export const Header = ({ dict }: { dict: any }) => {
   return (
     <motion.header 
-      className="fixed top-0 left-0 right-0 z-50 bg-black bg-opacity-50 backdrop-blur-md"
+      className="fixed top-0 left-0 right-0 z-50"
       initial="hidden"
       animate="visible"
       variants={headerVariants}

@@ -34,7 +34,7 @@ export const BackgroundBeam = () => {
     const drawBeam = (beam: typeof beams[0]) => {
       ctx.beginPath()
       ctx.arc(beam.x, beam.y, beam.radius, 0, Math.PI * 2)
-      ctx.fillStyle = 'rgba(59, 130, 246, 0.5)' // Blue color matching Taskio logo
+      ctx.fillStyle = '#FFF' // Blue color matching Taskio logo
       ctx.fill()
     }
 
@@ -66,6 +66,6 @@ export const BackgroundBeam = () => {
     }
   }, [])
 
-  return <canvas ref={canvasRef} className="fixed inset-0 -z-10" />
+  return <canvas ref={canvasRef} className="fixed inset-0 -z-50" />
 }
 

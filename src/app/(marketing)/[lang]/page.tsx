@@ -1,11 +1,11 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState, use } from "react";
+import { use, useEffect, useState } from "react";
 
 import AnimatedTitle from "@/components/animated-title";
 import { AuroraGradient } from "@/components/aurora-gradient";
-import { BackgroundBeam } from "@/components/background-beam";
+// import { BackgroundBeam } from "@/components/background-beam";
 import { Button } from "@/components/ui/button";
 import { FAQ } from "@/components/faq";
 import { Header } from "@/components/header";
@@ -65,9 +65,9 @@ export default function Home(
   return (
     <div
       dir={isRTL ? "rtl" : "ltr"}
-      className="taskio-landing relative min-h-screen bg-black text-white overflow-hidden"
+      className="taskio-landing relative min-h-screen text-white overflow-hidden"
     >
-      <BackgroundBeam />
+      {/* <BackgroundBeam /> */}
       <AuroraGradient />
       <Header dict={dict} />
 
