@@ -41,18 +41,11 @@ export default async function RootLayout(
   } = props;
 
   return (
-    <ClerkProvider>
       <html lang={params?.lang || "en"} dir={params?.lang === "ar" ? "rtl" : "ltr"}>
         <body className={inter.className}>
-          <SignedOut>
-            {/* <SignInButton /> */}
-          </SignedOut>
-          <SignedIn>
-            {/* <UserButton /> */}
-          </SignedIn>
+         
           {children}
         </body>
       </html>
-    </ClerkProvider>
   );
 }
