@@ -1,18 +1,18 @@
 "use client";
 
 import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, use } from "react";
 
-// import AnimatedTitle from "@/components/animated-title";
-// import { AuroraGradient } from "@/components/aurora-gradient";
-// import { BackgroundBeam } from "@/components/background-beam";
-// import { Button } from "@/components/ui/button";
-// import { FAQ } from "@/components/faq";
-// import { Header } from "@/components/header";
-// import { Locale } from "@/lib/i18n-config";
-// import { WhyTaskio } from "@/components/why-taskio";
-// import { getDictionary } from "@/lib/get-dictionary";
-// import { useInView } from "react-intersection-observer";
+import AnimatedTitle from "@/components/animated-title";
+import { AuroraGradient } from "@/components/aurora-gradient";
+import { BackgroundBeam } from "@/components/background-beam";
+import { Button } from "@/components/ui/button";
+import { FAQ } from "@/components/faq";
+import { Header } from "@/components/header";
+import { Locale } from "@/lib/i18n-config";
+import { WhyTaskio } from "@/components/why-taskio";
+import { getDictionary } from "@/lib/get-locels";
+import { useInView } from "react-intersection-observer";
 
 const fadeInUp = {
   hidden: { opacity: 0, y: 20 },
@@ -29,11 +29,17 @@ const staggerChildren = {
   },
 };
 
-export default function Home({
-  params: { lang },
-}: {
-  params: { lang: Locale };
-}) {
+export default function Home(
+  props: {
+    params: Promise<{ lang: Locale }>;
+  }
+) {
+  const params = use(props.params);
+
+  const {
+    lang
+  } = params;
+
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: true,
