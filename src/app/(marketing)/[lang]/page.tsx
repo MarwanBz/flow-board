@@ -9,6 +9,7 @@ import { AuroraGradient } from "@/components/aurora-gradient";
 import { Button } from "@/components/ui/button";
 import { FAQ } from "@/components/faq";
 import { Header } from "@/components/header";
+import Link from "next/link";
 import { Locale } from "@/lib/i18n-config";
 import { WhyTaskio } from "@/components/why-taskio";
 import { getDictionary } from "@/lib/get-locels";
@@ -96,12 +97,13 @@ export default function Home(
             {dict.description}
           </motion.p>
           <motion.div className="space-y-4" variants={fadeInUp}>
-            <Button
-              size="lg"
-              className="bg-blue-500 hover:bg-blue-600 text-white text-lg px-8 py-4 button-hover-effect"
+            <Link
+              href="/sign-in"
+              
+              className="bg-blue-500 hover:bg-blue-600 text-white text-lg px-8 py-4 button-hover-effect rounded-lg"
             >
               {dict.cta}
-            </Button>
+            </Link>
             <p className="text-sm text-gray-400">
               {dict.limitedOffer.text}: {dict.limitedOffer.description}
             </p>

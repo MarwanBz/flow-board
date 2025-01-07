@@ -38,9 +38,9 @@ export const Header = ({ dict }: { dict: any }) => {
           />
         </Link>
         <div className="flex items-center space-x-4">
-          <Button size="sm" className="bg-blue-500 hover:bg-blue-600 text-white">
+          <Link href="/sign-in" className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded">
             {dict?.headerCTA}
-          </Button>
+          </Link>
           <LanguageSwitcher />
         </div>
       </div>
