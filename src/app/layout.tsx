@@ -2,13 +2,22 @@ import "./globals.css";
 
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
+import { siteConfig } from "../../config/site";
 
-const inter = Inter({ subsets: ["latin",] });
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Taskio - Organize. Collaborate. Achieve.",
-  description:
-    "Your tasks, simplified. The smart way to manage projects and boost productivity.",
+  title: {
+    default: siteConfig.name,
+    template: ` % s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  icons: [
+    {
+      url: "/assets/logo-shape.svg",
+      href: "/assets/logo-shape.svg",
+    },
+  ],
 };
 
 export default function RootLayout({
