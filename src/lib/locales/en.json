@@ -1,0 +1,74 @@
+{
+  "title": "Organize. Collaborate. Achieve.",
+  "description": "Your tasks, simplified. The smart way to manage projects and boost productivity.",
+  "cta": "Get Started",
+  "headerCTA": "Try for Free",
+  "features": {
+    "title": "Why Choose Taskio?",
+    "list": [
+      {
+        "title": "Smart Organization",
+        "description": "Organize tasks your way with flexible boards and lists"
+      },
+      {
+        "title": "Team Collaboration",
+        "description": "Work together seamlessly with real-time updates"
+      },
+      {
+        "title": "Productivity Boost",
+        "description": "Get more done with powerful automation and integrations"
+      }
+    ]
+  },
+  "whyTaskio": {
+    "title": "Why Taskio?",
+    "benefits": [
+      {
+        "title": "Intuitive Design",
+        "description": "User-friendly interface that's easy to learn and use"
+      },
+      {
+        "title": "Customizable Workflows",
+        "description": "Adapt Taskio to fit your unique team processes"
+      },
+      {
+        "title": "Real-time Collaboration",
+        "description": "Stay in sync with your team, no matter where you are"
+      },
+      {
+        "title": "Powerful Integrations",
+        "description": "Connect with the tools you already use and love"
+      }
+    ]
+  },
+  "valueProposition": "Boost team productivity by 40% with our intuitive task management solution",
+  "limitedOffer": {
+    "text": "Limited Time Offer",
+    "description": "Get 3 months free when you sign up for an annual plan"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "questions": [
+      {
+        "question": "How does Taskio help manage tasks more efficiently?",
+        "answer": "Taskio offers intuitive boards and lists that allow you to organize tasks in a way that makes sense for your team. With features like drag-and-drop, custom fields, and task dependencies, you can streamline your workflow and focus on what's important."
+      },
+      {
+        "question": "Can Taskio handle complex projects with multiple teams?",
+        "answer": "Taskio is designed to scale with your needs. You can create multiple workspaces for different projects or teams, set up custom workflows, and use our powerful search and filtering tools to manage even the most complex projects with ease."
+      },
+      {
+        "question": "What kind of integrations does Taskio offer?",
+        "answer": "Taskio integrates seamlessly with a wide range of popular tools including Slack, Google Workspace, Microsoft Teams, GitHub, and more. Our open API also allows for custom integrations, ensuring Taskio fits perfectly into your existing tech stack."
+      },
+      {
+        "question": "Is there a mobile app for Taskio?",
+        "answer": "Yes, Taskio offers mobile apps for both iOS and Android. Stay connected and manage your tasks on the go, with real-time synchronization across all your devices."
+      },
+      {
+        "question": "How secure is my data with Taskio?",
+        "answer": "Security is our top priority. Taskio uses bank-level encryption for data transfer and storage. We're GDPR compliant and offer features like two-factor authentication and single sign-on (SSO) for enterprise accounts to ensure your data stays safe and secure."
+      }
+    ]
+  }
+}
