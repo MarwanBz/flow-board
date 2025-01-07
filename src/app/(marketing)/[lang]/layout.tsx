@@ -19,12 +19,11 @@ export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
 }
 
-
-export default async function RootLayout(
+export default async function MarketingLayout(
   props: {
     children: React.ReactNode;
     params: Promise<{ lang: Locale }>;
-    }
+  }
 ) {
   const params = await props.params;
 
@@ -32,18 +31,11 @@ export default async function RootLayout(
     children
   } = props;
 
-  // const { lang } = await params
-
   const isValidLocale = i18n.locales.includes(params.lang);
 
   if (!isValidLocale) {
     return null; // This will trigger a 404 page
   }
 
-  return (
-    <html lang={params.lang} dir={params.lang === "ar" ? "rtl" : "ltr"}>
-      <body className={inter.className}>{children}</body>
-    </html>
-  );
+  return <>{children}</>;
 }
-

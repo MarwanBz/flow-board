@@ -28,20 +28,27 @@ export const metadata: Metadata = {
   ],
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default async function RootLayout(
+  props: {
+    children: React.ReactNode;
+    params?: Promise<{ lang?: string }>;
+  }
+) {
+  const params = await props.params;
+
+  const {
+    children
+  } = props;
+
   return (
     <ClerkProvider>
-      <html >
-        <body>
+      <html lang={params?.lang || "en"} dir={params?.lang === "ar" ? "rtl" : "ltr"}>
+        <body className={inter.className}>
           <SignedOut>
             {/* <SignInButton /> */}
           </SignedOut>
           <SignedIn>
-            <UserButton />
+            {/* <UserButton /> */}
           </SignedIn>
           {children}
         </body>
