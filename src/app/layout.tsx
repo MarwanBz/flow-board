@@ -1,13 +1,5 @@
 import "./globals.css";
 
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
-} from "@clerk/nextjs";
-
 import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import { siteConfig } from "../../config/site";
@@ -43,7 +35,6 @@ export default async function RootLayout(
   return (
       <html lang={params?.lang || "en"} dir={params?.lang === "ar" ? "rtl" : "ltr"}>
         <body className={inter.className}>
-         
           {children}
         </body>
       </html>
