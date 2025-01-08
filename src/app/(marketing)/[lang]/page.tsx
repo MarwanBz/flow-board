@@ -5,8 +5,6 @@ import { use, useEffect, useState } from "react";
 
 import AnimatedTitle from "@/components/animated-title";
 import { AuroraGradient } from "@/components/aurora-gradient";
-// import { BackgroundBeam } from "@/components/background-beam";
-import { Button } from "@/components/ui/button";
 import { FAQ } from "@/components/faq";
 import { Header } from "@/components/header";
 import Link from "next/link";
@@ -98,15 +96,15 @@ export default function Home(
           </motion.p>
           <motion.div className="space-y-4" variants={fadeInUp}>
             <Link
-              href="/sign-in"
+              href="/sign-up"
               
               className="bg-blue-500 hover:bg-blue-600 text-white text-lg px-8 py-4 button-hover-effect rounded-lg"
             >
               {dict.cta}
             </Link>
-            <p className="text-sm text-gray-400">
+            {/* <p className="text-sm text-gray-400">
               {dict.limitedOffer.text}: {dict.limitedOffer.description}
-            </p>
+            </p> */}
           </motion.div>
         </motion.div>
 
@@ -143,18 +141,6 @@ export default function Home(
 
           <FAQ dict={dict} />
 
-          {/* Final CTA */}
-          <motion.div className="mt-24 text-center" variants={fadeInUp}>
-            <h2 className="text-3xl font-bold mb-8">
-              Ready to boost your team's productivity?
-            </h2>
-            <Button
-              size="lg"
-              className="bg-blue-500 hover:bg-blue-600 text-white text-lg px-8 py-4 button-hover-effect"
-            >
-              {dict.cta}
-            </Button>
-          </motion.div>
         </motion.div>
       </motion.div>
     </div>
